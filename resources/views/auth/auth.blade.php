@@ -97,9 +97,15 @@
                 </div>
               </form>
               <center>
-                <button type="button" class="btn btn-primary btr"><i class="fa fa-facebook fa-1x"></i></button>
-                <button type="button" class="btn btn-primary btr"><i class="fa fa-instagram fa-1x"></i></button>
-                <button type="button" class="btn btn-primary btr"><i class="fa fa-twitter fa-1x"></i></button>
+                <a href="{{ route('oauth', 'facebook') }}">
+                  <button type="button" class="btn btn-primary btr"><i class="fa fa-facebook fa-1x"> </i></button>
+                </a>
+                <a href="{{ route('oauth', 'github') }}">
+                  <button type="button" class="btn btn-primary btr"><i class="fa fa-github fa-1x"></i></button>
+                </a>
+                <a href="{{ route('oauth', 'twitter') }}">
+                  <button type="button" class="btn btn-primary btr"><i class="fa fa-twitter fa-1x"></i></button>
+                </a>
               </center>
           </div>
       </div>

@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/check/mail', 'Auth\RegisterController@checkMail')->name('check_mail');
 Route::get('/check/username', 'Auth\RegisterController@checkUsername')->name('check_username');
+
+//OAUTH LIINKS
+Route::get('/oauth/{provider}', 'Auth\SocialAuthController@send')->name('oauth');
+Route::get('/oauth/{provider}/callback', 'Auth\SocialAuthController@recieve');
